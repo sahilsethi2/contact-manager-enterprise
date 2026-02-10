@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
     <style>
         .container{
             width: 50%;
@@ -16,8 +17,12 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Welcome to Home Page</h1>
+<div class="container text-2xl">
+    <h1 class="text-2 font-bold" data-th-text="${name}">Welcome to Home Page</h1>
+    <p>Youtube Channel : <span data-th-text="${youtubeChannel}"></span></p>
+    <p>Github Repo Link : <span data-th-text="${githubRepo}"></span></p>
+
+    <a data-th-href="${gitRepo}">Click here to open</a>
     <p>Lorem50Lorem50Lorem50Lorem50Lorem50
         Lorem50Lorem50Lorem50Lorem50Lorem50Lorem50
         Lorem50Lorem50Lorem50Lorem50Lorem50Lorem50

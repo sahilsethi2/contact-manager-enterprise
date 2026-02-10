@@ -11,9 +11,11 @@ public class PageController {
     public String home(Model model)
     {
         System.out.println("Home Page Handler");
+
+        //sending a data to the view
         model.addAttribute("name", "JPMC Services");
-        model.addAttribute("Employee Name", "Sahil Sethi");
-        model.addAttribute("Github Repository", "https://github.com/sahilsethi2/contact-manager-enterprise");
+        model.addAttribute("youtubeChannel", "Sahil Sethi");
+        model.addAttribute("gitRepo", "https://github.com/sahilsethi2/contact-manager-enterprise");
         return "home";
     }
 }
